@@ -49,7 +49,7 @@ class DetailUserActivity : AppCompatActivity() {
                     tvFollowing.text = resources.getString(R.string.following_user, it.following)
                     Glide.with(this@DetailUserActivity)
                         .load(it.avatarUrl)
-                        .into(imgUser)
+                        .into(imgUsers)
                 }
             }
         }
@@ -95,6 +95,7 @@ class DetailUserActivity : AppCompatActivity() {
         }
     }
 
+    @Suppress("DEPRECATION")
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true
